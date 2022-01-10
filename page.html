@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/mystyle.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3/dist/chart.min.js"></script> -->
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <form id="form1" >
+        Your adress: <input type="text" name="form_adress" value="0xE585FE3742BA48c8eB1A9c7813B416Ab726E1cf0" size="43"><br>
+        <input type="button" class="abutton" onclick='ecr_20_table(document.getElementById("form1").elements[0].value)' value="Etherium">
+        <input type="button" class="abutton" onclick='bep_20_table(document.getElementById("form1").elements[0].value)' value="Bianance">
+        <input type="button" class="abutton" onclick='erc_20_table(document.getElementById("form1").elements[0].value)' value="Avalanche">
+        <input type="button" class="abutton" onclick='erc_20_fantom_table(document.getElementById("form1").elements[0].value)' value="Fantom"> 
+        <input type="button" class="abutton" onclick='erc_20_polygon_table(document.getElementById("form1").elements[0].value)' value="Polygon"> 
+        <br>
+        <input type="button" class="abutton" onclick='draw_ecr_chart(document.getElementById("form1").elements[0].value)' value="chart"> 
+        <br>
+        <input type="button" class="abutton" onclick='all_20_table(document.getElementById("form1").elements[0].value)' value="All">
+    </form>
+      
+    <h2>ECR-20 (Etherium) token transaction list</h2>
+    <div id="ecr_20_container"></div>
+    <div id="ecr_20_chart">
+
+        <canvas id="ecr_20_canvas" width="400" height="100" aria-label="Hello ARIA World" role="img"></canvas>
+
+    </div>
+
+    <h2>BEP-20 (Binance) token transaction list</h2>
+    <div id="bep_20_container"></div>
+    
+    <h2>ERC-20 (Avalanche) token transaction list</h2>
+    <div id="erc_20_container"></div>
+
+    <h2>ERC-20 (Fantom) token transaction list</h2>
+    <div id="erc_20_fantom_container"></div>
+
+    <h2>ERC-20 (Polygon) token transaction list</h2>
+    <div id="erc_20_polygon_container"></div>
+
+
+</body>
+</html>
